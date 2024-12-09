@@ -74,7 +74,7 @@ const Navbar = () => {
                 <SheetTitle className="font-bold text-xl text-[#FF9F0D]">
                   FoodLuck Menu
                 </SheetTitle>
-                <SheetDescription>
+            
                   <ul className="space-y-4">
                     <li>
                       <Link href="/" onClick={() => setIsOpen(false)}>
@@ -112,7 +112,7 @@ const Navbar = () => {
                       </Link>
                     </li>
                   </ul>
-                </SheetDescription>
+              
               </SheetHeader>
             </SheetContent>
           </Sheet>
