@@ -41,8 +41,8 @@ const Shop = () => {
                   <Image
                     src={product.image}
                     alt={product.name}
-                    layout="fill" // This will make the image fill the parent container
-                    objectFit="cover" // Ensure the image is cropped to cover the container
+                    layout="fill" 
+                    objectFit="cover" 
                     className="rounded-t"
                   />
                 </div>
