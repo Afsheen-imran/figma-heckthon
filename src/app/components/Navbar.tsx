@@ -1,5 +1,5 @@
-
 "use client"
+
 import React, { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { LuUserRound } from "react-icons/lu";
@@ -10,12 +10,13 @@ import { FiAlignJustify } from "react-icons/fi";
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-const Header = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -28,7 +29,7 @@ const Header = () => {
           </h2>
         </div>
 
-        {/* Navigation Links for larger screens */}
+        {/* Navigation Links */}
         <div className="hidden sm:flex max-w-[508px]">
           <ul className="flex gap-2 sm:gap-4">
             <li className="font-bold font-helvetica text-[#FF9F0D] text-[14px] sm:text-[16px]">
@@ -55,62 +56,71 @@ const Header = () => {
           </ul>
         </div>
 
-        {/* Mobile Hamburger Menu and Icons */}
-        <div className="flex gap-3 sm:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <FiAlignJustify
-                size="24px"
-                className="text-[#ffffff] cursor-pointer"
-                onClick={() => setIsOpen(!isOpen)}
-              />
+        {/* Icons */}
+        <div className="flex gap-3">
+          <IoIosSearch size="20px" className="text-[#ffffff] sm:text-[24px]" />
+          <Link href="/signup">
+            <LuUserRound size="20px" className="text-[#ffffff] sm:text-[24px]" />
+          </Link>
+          <Link href="/cart">
+            <HiOutlineShoppingBag size="20px" className="text-[#ffffff] sm:text-[24px]" />
+          </Link>
+          {/* Mobile Menu Trigger */}
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger>
+              <FiAlignJustify size="24px" className="text-[#ffffff]" />
             </SheetTrigger>
-            <SheetContent side="left" open={isOpen} onClose={() => setIsOpen(false)}>
+            <SheetContent side="left">
               <SheetHeader>
                 <SheetTitle className="font-bold text-xl text-[#FF9F0D]">
                   FoodLuck Menu
                 </SheetTitle>
+                <SheetDescription>
+                  <ul className="space-y-4">
+                    <li>
+                      <Link href="/" onClick={() => setIsOpen(false)}>
+                        Home
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/menu" onClick={() => setIsOpen(false)}>
+                        Menu
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog" onClick={() => setIsOpen(false)}>
+                        Blog
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/pages" onClick={() => setIsOpen(false)}>
+                        Pages
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/about" onClick={() => setIsOpen(false)}>
+                        About
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/shop" onClick={() => setIsOpen(false)}>
+                        Shop
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/contact" onClick={() => setIsOpen(false)}>
+                        Contact
+                      </Link>
+                    </li>
+                  </ul>
+                </SheetDescription>
               </SheetHeader>
-              <ul className="space-y-4">
-                <li className="text-[#ffffff] text-lg">
-                  <Link href="/">Home</Link>
-                </li>
-                <li className="text-[#ffffff] text-lg">
-                  <Link href="/menu">Menu</Link>
-                </li>
-                <li className="text-[#ffffff] text-lg">
-                  <Link href="/blog">Blog</Link>
-                </li>
-                <li className="text-[#ffffff] text-lg">
-                  <Link href="/pages">Pages</Link>
-                </li>
-                <li className="text-[#ffffff] text-lg">
-                  <Link href="/about">About</Link>
-                </li>
-                <li className="text-[#ffffff] text-lg">
-                  <Link href="/shop">Shop</Link>
-                </li>
-                <li className="text-[#ffffff] text-lg">
-                  <Link href="/contact">Contact</Link>
-                </li>
-              </ul>
             </SheetContent>
           </Sheet>
-
-          {/* Search Icon */}
-          <IoIosSearch size="20px" className="text-[#ffffff] sm:text-[24px]" />
-          {/* User Icon */}
-          <Link href="/signup">
-            <LuUserRound size="20px" className="text-[#ffffff] sm:text-[24px]" />
-          </Link>
-          {/* Shopping Bag Icon */}
-          <Link href="/cart">
-            <HiOutlineShoppingBag size="20px" className="text-[#ffffff] sm:text-[24px]" />
-          </Link>
         </div>
       </div>
     </header>
   );
 };
 
-export default Header;
+export default Navbar;

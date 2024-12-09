@@ -1,6 +1,7 @@
 import Image from "next/image";
 import menu from "./menu1";
 
+
 const Menu4 = () => {
   console.log(menu); // Debugging
 
@@ -23,7 +24,9 @@ const Menu4 = () => {
                     className="h-[119px] justify-center md:pl-[60px] md:pt-[40px] w-[120px]"
                   />
                   <div className="pt-4">
-                    <h2 className="text-lg font-bold text-center">{item.price}</h2>
+                    <h2 className="text-lg font-bold text-center">
+                      {item.price}
+                    </h2>
                     <p className="text-sm text-center pt-1">{item.title}</p>
                   </div>
                 </div>

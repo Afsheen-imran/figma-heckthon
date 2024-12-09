@@ -44,7 +44,7 @@ const FromMenu = () => {
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 relative">
                 <Image 
-                  src="/images/me1.png" 
+                  src="/images/lettuce.png" 
                   alt="Lettuce Leaf" 
                   fill 
                   className="rounded-md object-cover"
@@ -59,7 +59,7 @@ const FromMenu = () => {
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 relative">
                 <Image 
-                  src="/images/me2.png" 
+                  src="/images/fresh.png" 
                   alt="Lettuce Leaf" 
                   fill 
                   className="rounded-md object-cover"
@@ -74,7 +74,7 @@ const FromMenu = () => {
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 relative">
                 <Image 
-                  src="/images/me3.png" 
+                  src="/images/butter.png" 
                   alt="Lettuce Leaf" 
                   fill 
                   className="rounded-md object-cover"
@@ -89,7 +89,7 @@ const FromMenu = () => {
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 relative">
                 <Image 
-                  src="/images/me4.png" 
+                  src="/images/bread.png" 
                   alt="Fresh Breakfast" 
                   fill 
                   className="rounded-md object-cover"
@@ -108,7 +108,7 @@ const FromMenu = () => {
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 relative">
                 <Image 
-                  src="/images/me3.png" 
+                  src="/images/cheese.png" 
                   alt="Mild Butter" 
                   fill 
                   className="rounded-md object-cover"
@@ -123,7 +123,7 @@ const FromMenu = () => {
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 relative">
                 <Image 
-                  src="/images/me5.png" 
+                  src="/images/italian.png" 
                   alt="Mild Butter" 
                   fill 
                   className="rounded-md object-cover"
@@ -138,7 +138,7 @@ const FromMenu = () => {
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 relative">
                 <Image 
-                  src="/images/me6.png" 
+                  src="/images/beef.png" 
                   alt="Fresh Breakfast" 
                   fill 
                   className="rounded-md object-cover"
@@ -153,7 +153,7 @@ const FromMenu = () => {
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 relative">
                 <Image 
-                  src="/images/me7.png" 
+                  src="/images/pizza1.png" 
                   alt="Mild Butter" 
                   fill 
                   className="rounded-md object-cover"
