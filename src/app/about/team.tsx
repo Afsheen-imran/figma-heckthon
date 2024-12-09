@@ -14,27 +14,27 @@ const TeamMember = () => {
   const chef: Chef[] = [
     {
       id: 1,
-      image: '/images/chef.png',
-      name: 'Tahmina Rumi',
-      chef: 'Chef',
+      image: '/images/ch3.png',
+      name: 'Mark Henry',
+      chef: 'Owner',
     },
     {
       id: 2,
-      image: '/images/chef.png',
-      name: 'Jorina Begum',
+      image: '/images/ch3.png',
+      name: 'Lucy Helen',
       chef: 'Chef',
     },
     {
       id: 3,
-      image: '/images/chef.png',
-      name: 'M. Mohammad',
-      chef: 'Chef',
+      image: '/images/ch3.png',
+      name: 'Moon Henry',
+      chef: 'Founder',
     },
     {
       id: 4,
-      image: '/images/chef.png',
-      name: 'Munna Kathy',
-      chef: 'Chef',
+      image: '/images/ch3.png',
+      name: 'Tom Monro',
+      chef: 'Specialist',
     },
   ];
 

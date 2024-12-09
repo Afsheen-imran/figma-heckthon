@@ -15,8 +15,8 @@ const Testimonial1 = () => {
           </div>
           <div className="flex flex-col items-center text-center pb-8">
             <Image 
-              src="/images/test.png" 
-              alt="test" 
+              src="/images/pic1.png" 
+              alt="pic" 
               width={133} 
               height={134} 
               className="rounded-full relative mb-[-50px]"

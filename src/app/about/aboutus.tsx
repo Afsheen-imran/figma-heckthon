@@ -78,7 +78,7 @@ export default function Aboutus() {
         <div className="h-full  flex justify-center items-center  flex-col  rounded-lg overflow-hidden">
           <Image
         
-            src="/images/ab5.png"
+            src="/images/student.png"
             width={80} height={80}
             alt="blog"
           />
@@ -95,7 +95,7 @@ export default function Aboutus() {
         <div className="h-full flex justify-center items-center  flex-col rounded-lg overflow-hidden">
           <Image
             className=""
-            src="/images/ab6.png"
+            src="/images/coffee.png"
             width={80} height={80}
             alt="blog"
           />
@@ -112,7 +112,7 @@ export default function Aboutus() {
         <div className="h-full  flex justify-center items-center  flex-col rounded-lg overflow-hidden">
           <Image
             className=" flex flex-col justify-center items-center"
-            src="/images/ab7.png"
+            src="/images/Person.png"
             width={80} height={80}
             alt="blog"
             
