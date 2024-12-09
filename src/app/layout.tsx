@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Great_Vibes } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -7,7 +7,7 @@ import Bottom from "./components/Bottom";
 
 // Using optimized Google Fonts
 const inter = Inter({ subsets: ["latin"] });
-const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
+
 
 export const metadata: Metadata = {
   title: "My Next.js App", // Customize the title for your app

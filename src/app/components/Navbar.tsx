@@ -10,7 +10,6 @@ import { FiAlignJustify } from "react-icons/fi";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
