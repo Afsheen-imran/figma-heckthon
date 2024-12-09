@@ -1,16 +1,17 @@
 import React from "react";
 import Image from "next/image"; // Import the Image component
 
+// Use a consistent key name, e.g., "image"
 const products = [
-  { id: 1, name: "Fresh Lime", price: "$12.00", images: "/FreshLime.jpg" },
-  { id: 2, name: "Chocolate Muffin", price: "$15.00", images: "/ChocolateMuffin.jpg" },
+  { id: 1, name: "Fresh Lime", price: "$12.00", image: "/FreshLime.jpg" },
+  { id: 2, name: "Chocolate Muffin", price: "$15.00", image: "/ChocolateMuffin.jpg" },
   { id: 3, name: "Burger", price: "$8.00", image: "/Burger.jpg" },
-  { id: 4, name: "Country Burger", price: "$18.00", images: "/countryburger.jpg" },
+  { id: 4, name: "Country Burger", price: "$18.00", image: "/countryburger.jpg" },
   { id: 5, name: "Drink", price: "$3.50", image: "/drink.jpg" },
   { id: 6, name: "Pizza", price: "$14.00", image: "/pizza.jpg" },
-  { id: 7, name: "Cheese Butter", price: "$20.00", images: "/cheesebutter.jpg" },
-  { id: 8, name: "Sandwiches", price: "$22.00", images: "/sandwiches.jpg" },
-  { id: 9, name: "Chicken Chup", price: "$5.00", images: "/chickenchup.jpg" },
+  { id: 7, name: "Cheese Butter", price: "$20.00", image: "/cheesebutter.jpg" },
+  { id: 8, name: "Sandwiches", price: "$22.00", image: "/sandwiches.jpg" },
+  { id: 9, name: "Chicken Chup", price: "$5.00", image: "/chickenchup.jpg" },
 ];
 
 const Shop = () => {
@@ -39,7 +40,7 @@ const Shop = () => {
                 {/* Ensure that the parent container has a defined height */}
                 <div className="relative w-full h-40">
                   <Image
-                    src={product.image}
+                    src={product.image || "/placeholder.jpg"} // Fallback for missing images
                     alt={product.name}
                     layout="fill" 
                     objectFit="cover" 
