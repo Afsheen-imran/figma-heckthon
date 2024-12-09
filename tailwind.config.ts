@@ -8,6 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+		screens: {
+			'xs': '320px',  // Extra small devices like small mobile phones
+			'sm': '480px',  // Small mobile devices
+			'md': '768px',  // Tablets
+			'lg': '1024px', // Desktop (laptops, small screens)
+			'xl': '1280px', // Larger screens (large desktops)
+			'2xl': '1536px', // Very large screens (wide desktop monitors)
+		  },
+
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
