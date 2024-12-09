@@ -1,20 +1,19 @@
+import React from 'react'
+import Hero from './components/Hero'
+import Hero1 from './components/Hero1'
+import Hero2 from './components/Hero2'
 
 
-
-
-import Navbar from './components/Navbar'; 
-import Footer from './components/Footer'; 
-import Hero from './components/Hero';
-import FoodItems from './components/FoodItems';
-
-export default function Home() {
+const page = () => {
   return (
-    <main className="min-h-screen" aria-label="Main Content">
-      <Navbar />
-      <Hero />
-      <FoodItems/>
-      <Footer />
+    <div>
+      <Hero/>
+      <Hero1/>
+      <Hero2/>
       
-    </main>
-  );
+      
+    </div>
+  )
 }
+
+export default page

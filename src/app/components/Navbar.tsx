@@ -1,120 +1,60 @@
-"use client";
-
-import { useState } from "react";
+import React from "react";
+import { IoIosSearch } from "react-icons/io";
+import { LuUserRound } from "react-icons/lu";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
 import Link from "next/link";
-import { IoSearch } from "react-icons/io5"; // Search Icon
-import { PiHandbagBold } from "react-icons/pi"; // Shopping Bag Icon
 
-export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
+const Header = () => {
   return (
-    <nav className="bg-black text-white shadow-md">
-      <div className="container mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
+    <header className="relative max-w-full bg-[#0D0D0D] h-[90px]">
+      <div className="absolute max-w-full mt-[15px] bg-[#0D0D0D] w-full flex-wrap flex justify-between items-center px-4 sm:px-8 h-[32px]">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold">
-          Food<span className="text-orange-500">tuck</span>
-        </Link>
-
-        {/* Large Screen Navigation */}
-        <div className="hidden lg:flex items-center justify-between flex-1 ml-8">
-          {/* Navigation Links */}
-          <div className="flex space-x-6">
-            <Link href="/" className="hover:text-orange-500 transition">
-              Home
-            </Link>
-            <Link href="/menu" className="hover:text-orange-500 transition">
-              Menu
-            </Link>
-            <Link href="/blog" className="hover:text-orange-500 transition">
-              Blog
-            </Link>
-            <Link href="/pages" className="hover:text-orange-500 transition">
-              Pages
-            </Link>
-            <Link href="/about" className="hover:text-orange-500 transition">
-              About
-            </Link>
-            <Link href="/shop" className="hover:text-orange-500 transition">
-              Shop
-            </Link>
-            <Link href="/contact" className="hover:text-orange-500 transition">
-              Contact
-            </Link>
-          </div>
-
-          {/* Search Bar */}
-          <div className="flex items-center bg-gray-800 px-3 py-2 rounded-full w-[200px] lg:w-[250px] ml-8">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="bg-transparent text-white placeholder-gray-400 focus:outline-none w-full text-sm"
-            />
-            <IoSearch className="text-orange-500 ml-2" />
-          </div>
-
-          {/* Shopping Bag Icon */}
-          <div className="ml-8">
-            <PiHandbagBold className="text-white text-2xl hover:text-orange-500 transition" />
-          </div>
+        <div className="max-w-[109px]">
+          <h2 className="font-helvetica font-bold text-[20px] sm:text-[24px] text-[#ffffff]">
+            Food<span className="text-[#FF9F0D]">Luck</span>
+          </h2>
         </div>
 
-        {/* Hamburger Icon (Small Screens) */}
-        <div className="lg:hidden text-2xl cursor-pointer" onClick={toggleMenu}>
-          {isMenuOpen ? "✕" : "≡"}
-        </div>
-      </div>
-
-      {/* Collapsible Menu for Small Screens */}
-      <div
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } lg:hidden bg-black text-white mt-4 space-y-4 px-6`}
-      >
         {/* Navigation Links */}
-        <div className="flex flex-col space-y-4">
-          <Link href="/" className="hover:text-orange-500 transition">
-            Home
-          </Link>
-          <Link href="/menu" className="hover:text-orange-500 transition">
-            Menu
-          </Link>
-          <Link href="/blog" className="hover:text-orange-500 transition">
-            Blog
-          </Link>
-          <Link href="/pages" className="hover:text-orange-500 transition">
-            Pages
-          </Link>
-          <Link href="/about" className="hover:text-orange-500 transition">
-            About
-          </Link>
-          <Link href="/shop" className="hover:text-orange-500 transition">
-            Shop
-          </Link>
-          <Link href="/contact" className="hover:text-orange-500 transition">
-            Contact
-          </Link>
+        <div className="hidden sm:flex max-w-[508px]">
+          <ul className="flex gap-2 sm:gap-4">
+            <li className="font-bold font-helvetica text-[#FF9F0D] text-[14px] sm:text-[16px]">
+              <Link href="/">Home</Link>
+            </li>
+            <li className="font-normal font-helvetica text-[#ffffff] text-[14px] sm:text-[16px]">
+              <Link href="/menu">Menu</Link>
+            </li>
+            <li className="font-normal font-helvetica text-[#ffffff] text-[14px] sm:text-[16px]">
+              <Link href="/blog">Blog</Link>
+            </li>
+            <li className="font-normal font-helvetica text-[#ffffff] text-[14px] sm:text-[16px]">
+              <Link href="/pages">Pages</Link>
+            </li>
+            <li className="font-normal font-helvetica text-[#ffffff] text-[14px] sm:text-[16px]">
+              <Link href="/about">About</Link>
+            </li>
+            <li className="font-normal font-helvetica text-[#ffffff] text-[14px] sm:text-[16px]">
+              <Link href="/shop">Shop</Link>
+            </li>
+            <li className="font-normal font-helvetica text-[#ffffff] text-[14px] sm:text-[16px]">
+              <Link href="/contact">Contact</Link>
+            </li>
+          </ul>
         </div>
 
-        {/* Search Bar */}
-        <div className="flex items-center bg-gray-800 px-3 py-2 rounded-full w-full">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="bg-transparent text-white placeholder-gray-400 focus:outline-none w-full text-sm"
-          />
-          <IoSearch className="text-orange-500 ml-2" />
-        </div>
-
-        {/* Shopping Bag Icon */}
-        <div>
-          <PiHandbagBold className="text-white text-2xl hover:text-orange-500 transition" />
+        {/* Icons */}
+        <div className="flex gap-3">
+          <IoIosSearch size="20px" className="text-[#ffffff] sm:text-[24px]" />
+          <Link href="/signup">
+            <LuUserRound size="20px" className="text-[#ffffff] sm:text-[24px]" />
+          </Link>
+          <Link href="/cart">
+            <HiOutlineShoppingBag size="20px" className="text-[#ffffff] sm:text-[24px]" />
+          </Link>
         </div>
       </div>
-    </nav>
+    </header>
   );
-}
+};
+
+export default Header;

@@ -1,38 +1,41 @@
+import React from "react";
 import Image from "next/image";
-  import plate from "@/public/images/image-1.png";
-
-export default function Hero(){
-  return(
-      
-      <main className="w-full flex justify-center items-center ">
-      <div className="sm:w-full md:w-[100%] sm:p-5 sm:h--auto md:h-[500px] flex sm:flex-row sm:justify-start md:justify-center sm:items-start md:items-center  bg-black w-1390">
-         <div className="sm:w-full md:w-[50%] p-4 ">
-              <h3 className="text-yellow-500 font-sans">Its Quick & Amusing</h3>
-          
-              <h1 className="text-white font-bold font-bolf sm:text-md md:text-3xl lg:text-5xl flex flex-row mt-2" > 
-   <div className="text-yellow-400">Th</div>e Art of Speed</h1>
-              <h2 className="text-white font-bolf sm:text-md md:text-3xl lg:text-5xl pt-4">Food Quality</h2>
-        {/* timer */}
-      <div className="flex sm:flex-wrap sm:justify-start md:justify-start pt-5 pb-4 gap-4">
-          
-<p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere voluptatum tempore massa conque</p>
-
-          
-
-        
+const Hero = ()=> {
+  return (
+    <section className="bg-black px-3 md:px-[80px] gap-10 lg:px-[135px] flex flex-col justify-evenly md:flex-row md:items-center py-[50px]">
+      <div>
+        <Image src="/images/bar.png" alt="bar" width={25.28} height={492}/>
       </div>
-  <button className="bg-yellow-500 sm:hidden w-190 md:block sm:px-3 md:px-7 sm:text-sm py-0 text-gray-400 rounded-full h-10 ">See Menu</button>
-  </div>
+      <div className="text-white w-full md:w-[50%]">
+        <h1 className="text-[20px] md:text-[28px] lg:text-[32px] font-greatvibes font-normal text-[#FF9F0D] whitespace-nowrap text-center md:text-left">
+          Its Quick & Amusing!
+        </h1>
 
-{/* image */}
-<div className="sm-w-full md:w-[30%] lg:w-[30%] pl-7 justify-center items-center flex flex-row">
-   <Image src= {plate} alt="plate"  
-   className="w-50 h-auto shadow-md "/> 
+        <h2 className="text-[24px] md:text-[40px] lg:text-[50px] font-bold font-helvetica whitespace-normal mt-3 text-center md:text-left">
+          <span className="text-[#FF9F0D]">Th</span>e Art of Speed Food Quality
+        </h2>
 
+        <p className="text-[12px] md:text-[14px] font-inter lg:text-[16px] font-normal mt-4 text-center md:text-left">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed pharetra dictum neque massa congue.
+        </p>
 
-</div>     
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-start mt-6">
+          <button className="bg-[#FF9F0D] text-white w-[100px] h-[30px] md:w-[160px] md:h-[50px] lg:w-[190px] lg:h-[60px] rounded-[40px] hover:bg-yellow-800">
+            See More
+          </button>
+        </div>
       </div>
-      </main>
-      
-  )
+      <div className="mt-[30px] md:mt-0 md:w-[50%] flex justify-center">
+        <Image
+          src="/images/hero.png"
+          alt="Hero Image"
+          width={1000}
+          height={1000}
+          className=" md:w-auto max-w-[877.8px] h-auto p-8 max-h-[670px] md:max-w-full"
+        />
+      </div>
+    </section>
+  );
 }
+
+export default Hero;

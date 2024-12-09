@@ -20,7 +20,7 @@ const Shop = () => {
       <div
         className="bg-cover bg-center text-white text-center py-12"
         style={{
-          backgroundImage: `url('/background.jpg')`, // Ensure the image is in the public folder
+          backgroundImage: `url('/background.jpg')`, 
         }}
       >
         <h2 className="text-4xl font-bold">Our Shop</h2>
@@ -36,12 +36,13 @@ const Shop = () => {
                 key={product.id}
                 className="bg-white shadow-md hover:shadow-lg p-4 rounded"
               >
+                {/* Ensure that the parent container has a defined height */}
                 <div className="relative w-full h-40">
                   <Image
                     src={product.image}
                     alt={product.name}
-                    layout="fill"
-                    objectFit="cover"
+                    layout="fill" // This will make the image fill the parent container
+                    objectFit="cover" // Ensure the image is cropped to cover the container
                     className="rounded-t"
                   />
                 </div>

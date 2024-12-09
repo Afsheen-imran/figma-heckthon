@@ -1,149 +1,84 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-
-import footer1 from "@/public/images/footer-1.png";
-import footer2 from "@/public/images/footer-2.png";
-import footer3 from "@/public/images/footer-3.png";
-
-import { PiClockClockwiseBold } from "react-icons/pi";
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaPinterest } from "react-icons/fa";
+import React from 'react';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white">
-      <div className="flex flex-col md:flex-row justify-center items-center bg-black px-3 md:px-[135px] py-8">
-        <div className="text-white text-center md:text-left md:w-[50%] w-full">
-          <h2 className="text-[20px] md:text-[32px] font-semibold">
-            <span className="text-[#FF9F0D]">St</span>ill Need Our Support
-          </h2>
-          <p className="text-[10px] md:text-[16px] font-normal mt-[17px]">
-            Don&#39;t wait make a smart & logical quote here. Its pretty easy.
-          </p>
-        </div>
-
-        <div className="flex md:mt-0 mt-4 justify-center md:justify-start w-full">
-          <input
-            type="text"
-            placeholder="Enter Your Email"
-            className="bg-[#FF9F0D] text-white py-2 px-3 md:py-[10px] md:px-[20px] mr-2 w-[80%] md:w-auto"
-          />
-          <button className="text-[#FF9F0D] bg-white py-2 px-4 md:py-[10px] md:px-[20px]">
-            Subscribe Now
-          </button>
-        </div>
-      </div>
-
-      <hr className="my-4 border-[#FF9F0D]" />
-
-      <div className="mx-auto w-full max-w-screen-xl px-4 py-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <h2 className="mb-6 text-[24px] font-semibold uppercase">About Us</h2>
-            <ul className="text-gray-500 font-medium">
-              <li className="mb-4">
-                <p className="text-[#FFFFFF] text-[16px] font-normal hover:underline">
-                  Corporate clients and leisure travelers rely on Groundlink for dependable, safe, and professional chauffeured car service in major cities across the world.
-                </p>
-              </li>
-              <li className="flex justify-center gap-4">
-                <div className="bg-[#FF9F0D] flex justify-center items-center w-[72px] h-[72px]">
-                  <PiClockClockwiseBold className="text-white text-[40px]" />
-                </div>
-                <div>
-                  <h3 className="text-[16px] text-[#FFFFFF] font-normal">Opening Hours</h3>
-                  <p className="text-[10px] text-[#FFFFFF]">Mon - Sat (8:00 - 18:00)</p>
-                  <p className="text-[10px] text-[#FFFFFF]">Sunday - Closed</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div className="text-center">
-            <h2 className="mb-6 text-[24px] font-semibold uppercase">Useful Links</h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="mb-4"><a href="#" className="hover:underline">About</a></li>
-              <li className="mb-4"><a href="#" className="hover:underline">News</a></li>
-              <li className="mb-4"><a href="#" className="hover:underline">Partner</a></li>
-              <li className="mb-4"><a href="#" className="hover:underline">Team</a></li>
-              <li className="mb-4"><a href="#" className="hover:underline">Menu</a></li>
-              <li className="mb-4"><a href="#" className="hover:underline">Contact</a></li>
-            </ul>
-          </div>
-
-          <div className="text-center">
-            <h2 className="mb-6 text-[24px] font-semibold uppercase">Help?</h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              {/* Updated Link to point to FAQ page */}
-              <li className="mb-4"><Link href="/faq" className="hover:underline">
-  FAQ
-</Link></li>
-              <li className="mb-4"><a href="#" className="hover:underline">Terms & Conditions</a></li>
-              <li className="mb-4"><a href="#" className="hover:underline">Reporting</a></li>
-              <li className="mb-4"><a href="#" className="hover:underline">Documentation</a></li>
-              <li className="mb-4"><a href="#" className="hover:underline">Support Policy</a></li>
-              <li className="mb-4"><a href="#" className="hover:underline">Privacy</a></li>
-            </ul>
-          </div>
-
-          <div className="text-center">
-            <h2 className="mb-6 text-[24px] font-semibold uppercase">Recent Posts</h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="flex justify-center gap-4">
-                <Image src={footer1} alt="Food" className="w-16 h-16" />
-                <div>
-                  <h2 className="text-[12px] text-[#FFFFFF] font-normal">20 Feb 2022</h2>
-                  <h3 className="text-[14px] font-normal text-[#FFFFFF]">Keep Your Business</h3>
-                </div>
-              </li>
-              <li className="flex justify-center gap-4 mt-4">
-                <Image src={footer2} alt="Food" className="w-16 h-16" />
-                <div>
-                  <h2 className="text-[12px] text-[#FFFFFF] font-normal">20 Feb 2022</h2>
-                  <h3 className="text-[14px] font-normal text-[#FFFFFF]">Keep Your Business</h3>
-                </div>
-              </li>
-              <li className="flex justify-center gap-4 mt-4">
-                <Image src={footer3} alt="Food" className="w-16 h-16" />
-                <div>
-                  <h2 className="text-[12px] text-[#FFFFFF] font-normal">20 Feb 2022</h2>
-                  <h3 className="text-[14px] font-normal text-[#FFFFFF]">Keep Your Business</h3>
-                </div>
-              </li>
-            </ul>
+    <>
+      <div className="bg-[#0D0D0D] h-[774px] w-full md:px-[150px] pt-12">
+        <div className="max-w-full mx-auto border-b border-[#FF9F0D] pb-8">
+          <div className="flex flex-col md:flex-row justify-between items-start mb-8">
+            <div className="w-full md:w-[45%] mb-8 md:mb-0">
+              <h2 className="text-[24px] md:text-[32px] font-helvetica font-bold text-[#FFFFFF]">
+                <span className='text-[#FF9F0D]'>St</span>ill You Need Our Support?
+              </h2>
+              <p className="text-[14px] md:text-[16px] font-helvetica font-normal text-[#FFFFFF] mt-2">
+                Don’t wait; make a smart & logical quote here. It’s pretty easy.
+              </p>
+            </div>
+            <div className="flex flex-col md:flex-row w-full md:w-[50%]">
+              <input
+                type="text"
+                placeholder="Enter Your Email"
+                className="font-inter font-normal text-[14px] md:text-[16px] text-[#FFFFFF] bg-[#FF9F0D] p-2 "
+              />
+              <button className="font-inter font-normal text-[14px] md:text-[16px] text-[#FF9F0D] bg-[#FFFFFF] p-2 md:p-3 rounded-[2px] hover:text-[#000000] hover:bg-[#eee3d3] transition duration-300">
+                Subscribe Now
+              </button>
+            </div>
           </div>
         </div>
+        <div className="flex flex-wrap md:flex-nowrap justify-between gap-12 mt-12">
+          <div className="w-full md:w-[35%] sm:w-[45%] mb-8 md:mb-0">
+            <h2 className="font-helvetica text-[16px] md:text-[20px] font-bold text-[#FFFFFF] mb-2">About Us</h2>
+            <p className="font-helvetica text-[14px] md:text-[16px] font-normal text-[#FFFFFF]">
+              Corporate clients and leisure travelers have been relying on Groundlink for dependable, safe, and professional
+              chauffeured car service in major cities across the world.
+            </p>
+            <div className="flex items-start gap-4 mt-4">
+              <div className="bg-[#FF9F0D] p-2 rounded-md">
+                <Image src="/images/icon.png" alt="icon" width={39} height={39} />
+              </div>
+              <div>
+                <p className="font-inter text-[14px] md:text-[16px] font-normal text-[#FFFFFF]">Opening Hours</p>
+                <p className="font-inter text-[12px] md:text-[14px] font-normal text-[#FFFFFF]">Mon - Sat (8.00 - 6.00)</p>
+                <p className="font-inter text-[12px] md:text-[14px] font-normal text-[#FFFFFF]">Sunday - Closed</p>
+              </div>
+            </div>
+          </div>
 
-        <div className="w-full px-4 py-3 bg-[#FF9F0D] flex flex-col items-center justify-between md:flex-row">
-          <span className="text-sm text-black sm:text-center mb-4 md:mb-0">
-            © 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.
-          </span>
+          <div className="w-full md:w-[18%] md:block hidden mb-8 md:mb-0">
+            <h2 className="font-bold text-[16px] hidden md:text-[18px] text-[#FFFFFF] mb-4">Useful Links</h2>
+            <ul className="space-y-2">
+              {['About', 'News', 'Patrons', 'Team', 'Menu', 'Contact'].map((link, index) => (
+                <li key={index} className="font-normal text-[14px] md:text-[16px] text-[#FFFFFF]">{link}</li>
+              ))}
+            </ul>
+          </div>
 
-          <div className="flex justify-center gap-4">
-            <div className="bg-white w-9 h-9 flex justify-center items-center rounded text-black">
-              <FaFacebookF />
-            </div>
-            <div className="bg-white w-9 h-9 flex justify-center items-center rounded text-black">
-              <FaTwitter />
-            </div>
-            <div className="bg-white w-9 h-9 flex justify-center items-center rounded text-black">
-              <FaInstagram />
-            </div>
-            <div className="bg-white w-9 h-9 flex justify-center items-center rounded text-black">
-              <FaYoutube />
-            </div>
-            <div className="bg-white w-9 h-9 flex justify-center items-center rounded text-black">
-              <FaPinterest />
-            </div>
+          <div className="w-full md:w-[18%] md:block hidden mb-8 md:mb-0">
+            <h2 className="font-bold text-[16px] md:text-[18px]  text-[#FFFFFF] mb-4">Help?</h2>
+            <ul className="space-y-2">
+              {['FAQ', 'Terms & Conditions', 'Reporting', 'Documentation', 'Support Policy', 'Privacy'].map((item, index) => (
+                <li key={index} className="font-normal text-[14px] md:text-[16px] text-[#FFFFFF]">{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="w-full md:w-[35%] sm:w-[45%] mb-8 md:mb-0">
+            <h2 className="font-bold text-[16px] md:text-[18px] text-[#FFFFFF] mb-4">Recent Posts</h2>
+            {['Is fast food good for your body?', 'Change your food habit with organic food', 'Do you like fast food for your life?'].map((post, index) => (
+              <div key={index} className="flex gap-4 mb-4">
+                <Image src="/images/fo.png" alt="footer" width={80} height={80} className="w-[75px] h-[75px] object-cover" />
+                <div>
+                  <p className="text-[14px] md:text-[16px] font-helvetica font-normal text-[#FFFFFF]">{post}</p>
+                  <p className="text-[12px] md:text-[14px] font-helvetica font-normal text-[#FFFFFF] opacity-50">February 28, 2022</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </footer>
+    </>
   );
 };
 
