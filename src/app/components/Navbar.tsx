@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <header className="relative max-w-full bg-[#0D0D0D] h-[90px]">
-      <div className="absolute max-w-full mt-[15px] bg-[#0D0D0D] w-full flex-wrap flex justify-between items-center px-4 sm:px-8 h-[32px]">
+      <div className="absolute max-w-full mt-[15px] bg-[#0D0D0D] w-full flex-wrap flex justify-between items-center px-4 sm:px-8 h-[90px]">
         {/* Logo */}
         <div className="max-w-[109px]">
           <h2 className="font-helvetica font-bold text-[20px] sm:text-[24px] text-[#ffffff]">
@@ -31,27 +31,24 @@ const Navbar = () => {
         {/* Navigation Links */}
         <div className="hidden sm:flex max-w-[508px]">
           <ul className="flex gap-2 sm:gap-4">
-            <li className="font-bold font-helvetica text-[#FF9F0D] text-[14px] sm:text-[16px]">
-              <Link href="/">Home</Link>
-            </li>
-            <li className="font-normal font-helvetica text-[#ffffff] text-[14px] sm:text-[16px]">
-              <Link href="/menu">Menu</Link>
-            </li>
-            <li className="font-normal font-helvetica text-[#ffffff] text-[14px] sm:text-[16px]">
-              <Link href="/blog">Blog</Link>
-            </li>
-            <li className="font-normal font-helvetica text-[#ffffff] text-[14px] sm:text-[16px]">
-              <Link href="/pages">Pages</Link>
-            </li>
-            <li className="font-normal font-helvetica text-[#ffffff] text-[14px] sm:text-[16px]">
-              <Link href="/about">About</Link>
-            </li>
-            <li className="font-normal font-helvetica text-[#ffffff] text-[14px] sm:text-[16px]">
-              <Link href="/shop">Shop</Link>
-            </li>
-            <li className="font-normal font-helvetica text-[#ffffff] text-[14px] sm:text-[16px]">
-              <Link href="/contact">Contact</Link>
-            </li>
+            {[
+              { href: "/", label: "Home" },
+              { href: "/menu", label: "Menu" },
+              { href: "/blog", label: "Blog" },
+              { href: "/pages", label: "Pages" },
+              { href: "/about", label: "About" },
+              { href: "/shop", label: "Shop" },
+              { href: "/contact", label: "Contact" },
+            ].map((link) => (
+              <li
+                key={link.href}
+                className={`font-helvetica text-[14px] sm:text-[16px] ${
+                  link.href === "/" ? "font-bold text-[#FF9F0D]" : "font-normal text-[#ffffff]"
+                }`}
+              >
+                <Link href={link.href}>{link.label}</Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -64,56 +61,37 @@ const Navbar = () => {
           <Link href="/cart">
             <HiOutlineShoppingBag size="20px" className="text-[#ffffff] sm:text-[24px]" />
           </Link>
+
           {/* Mobile Menu Trigger */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger>
-              <FiAlignJustify size="24px" className="text-[#ffffff]" />
+            <SheetTrigger asChild>
+              <button>
+                <FiAlignJustify size="24px" className="text-[#ffffff]" />
+              </button>
             </SheetTrigger>
-            <SheetContent side="left">
+            <SheetContent side="left" className="bg-[#0D0D0D] text-[#ffffff]">
               <SheetHeader>
                 <SheetTitle className="font-bold text-xl text-[#FF9F0D]">
                   FoodLuck Menu
                 </SheetTitle>
-            
-                  <ul className="space-y-4">
-                    <li>
-                      <Link href="/" onClick={() => setIsOpen(false)}>
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/menu" onClick={() => setIsOpen(false)}>
-                        Menu
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/blog" onClick={() => setIsOpen(false)}>
-                        Blog
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/pages" onClick={() => setIsOpen(false)}>
-                        Pages
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/about" onClick={() => setIsOpen(false)}>
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/shop" onClick={() => setIsOpen(false)}>
-                        Shop
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/contact" onClick={() => setIsOpen(false)}>
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-              
               </SheetHeader>
+              <ul className="space-y-4 mt-4">
+                {[
+                  { href: "/", label: "Home" },
+                  { href: "/menu", label: "Menu" },
+                  { href: "/blog", label: "Blog" },
+                  { href: "/pages", label: "Pages" },
+                  { href: "/about", label: "About" },
+                  { href: "/shop", label: "Shop" },
+                  { href: "/contact", label: "Contact" },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} onClick={() => setIsOpen(false)}>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </SheetContent>
           </Sheet>
         </div>
